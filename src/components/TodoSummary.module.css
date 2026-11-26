@@ -1,0 +1,82 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.actionRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.activeCountText {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.activeCountText strong {
+  color: var(--color-text);
+  font-weight: var(--font-weight-semibold);
+}
+
+.clearButton {
+  min-height: 40px;
+  padding: 0 var(--space-3);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-danger);
+  border-radius: var(--radius-small);
+  transition: background-color var(--duration-fast) var(--ease-standard);
+}
+
+.clearButton:hover:not(:disabled) {
+  background-color: var(--color-danger-soft);
+}
+
+.clearButton:disabled {
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.statusRow {
+  display: flex;
+  align-items: center;
+}
+
+.storageNotice {
+  font-size: var(--font-size-caption);
+  color: var(--color-text-muted);
+}
+
+.storageError {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: var(--font-size-caption);
+  color: var(--color-danger);
+  line-height: var(--line-height-body);
+}
+
+.corruptedWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.resetStorageButton {
+  align-self: flex-start;
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-danger);
+  text-decoration: underline;
+  padding: 2px 4px;
+}

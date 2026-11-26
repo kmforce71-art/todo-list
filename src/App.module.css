@@ -1,0 +1,23 @@
+.container {
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  width: 100%;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  position: relative;
+}
+
+@media (min-width: 600px) {
+  .card {
+    padding: var(--space-8);
+  }
+}

@@ -1,0 +1,79 @@
+.toastContainer {
+  position: fixed;
+  bottom: calc(var(--space-4) + env(safe-area-inset-bottom, 0px));
+  left: var(--space-4);
+  right: var(--space-4);
+  max-width: 480px;
+  margin: 0 auto;
+  z-index: 1000;
+  animation: slideUp var(--duration-normal) var(--ease-standard);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.toastContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-text);
+  color: #ffffff;
+  border-radius: var(--radius-control);
+  box-shadow: var(--shadow-floating);
+}
+
+.message {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.actionGroup {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+.undoButton {
+  min-height: 36px;
+  padding: 0 var(--space-3);
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-small);
+  transition: opacity var(--duration-fast) var(--ease-standard);
+}
+
+.undoButton:hover {
+  opacity: 0.9;
+}
+
+.closeButton {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  opacity: 0.8;
+  border-radius: var(--radius-pill);
+}
+
+.closeButton:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+}

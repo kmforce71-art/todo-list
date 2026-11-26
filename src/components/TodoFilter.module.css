@@ -1,0 +1,126 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.controlsRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+@media (min-width: 600px) {
+  .controlsRow {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.filterGroup {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--color-surface-muted);
+  padding: var(--space-1);
+  border-radius: var(--radius-control);
+  gap: var(--space-1);
+  flex-shrink: 0;
+}
+
+.filterButton {
+  min-height: 38px;
+  min-width: 64px;
+  padding: 0 var(--space-3);
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-small);
+  transition: background-color var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filterButton:hover:not(.filterSelected) {
+  background-color: var(--color-border);
+  color: var(--color-text);
+}
+
+.filterSelected {
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.searchContainer {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+@media (min-width: 600px) {
+  .searchContainer {
+    max-width: 260px;
+    margin-left: auto;
+  }
+}
+
+.searchInputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.searchIcon {
+  position: absolute;
+  left: var(--space-3);
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  height: 40px;
+  padding: 0 36px 0 36px;
+  font-size: var(--font-size-small);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-control);
+  border-radius: var(--radius-control);
+  color: var(--color-text);
+  transition: border-color var(--duration-fast) var(--ease-standard);
+}
+
+.searchInput:focus {
+  border-color: var(--color-primary);
+}
+
+.searchInput::placeholder {
+  color: var(--color-text-muted);
+}
+
+.clearSearchButton {
+  position: absolute;
+  right: var(--space-2);
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  border-radius: var(--radius-pill);
+}
+
+.clearSearchButton:hover {
+  background-color: var(--color-surface-muted);
+  color: var(--color-text);
+}
+
+.resultMeta {
+  font-size: var(--font-size-caption);
+  color: var(--color-text-secondary);
+  padding: 0 var(--space-1);
+}
