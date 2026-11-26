@@ -11,7 +11,7 @@ describe('App Component Integration', () => {
   it('초기 화면에 헤더, 입력창, 필터, 빈 상태 메시지가 올바르게 렌더링된다', () => {
     render(<App />);
 
-    expect(screen.getByRole('heading', { name: '나의 할 일' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: '밍혜의 오늘 할 일' })).toBeInTheDocument();
     expect(screen.getByPlaceholderText('어떤 일을 할 예정인가요?')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: '할 일 추가' })).toBeInTheDocument();
     expect(screen.getByRole('button', { name: '전체' })).toHaveAttribute('aria-pressed', 'true');

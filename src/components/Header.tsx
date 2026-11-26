@@ -15,7 +15,7 @@ export function Header({ totalCount, completedCount, completionRate }: HeaderPro
     <header className={styles.header}>
       <div className={styles.titleGroup}>
         <span className={styles.date}>{currentDateStr}</span>
-        <h1 className={styles.title}>나의 할 일</h1>
+        <h1 className={styles.title}>밍혜의 오늘 할 일</h1>
         <p className={styles.subtitle}>작은 실천으로 채우는 하루</p>
       </div>
 

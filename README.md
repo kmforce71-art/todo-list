@@ -1,4 +1,4 @@
-# 나의 할 일 (TodoList 웹앱)
+# 밍혜의 오늘 할 일 (TodoList 웹앱)
 
 > 하루의 할 일을 빠르게 추가하고, 완료하고, 체계적으로 정리할 수 있는 한국어 지원 개인용 TodoList 웹앱입니다.  
 > [DESIGN.md](file:///c:/Users/USER/Desktop/antigaavity/wb/todo-list/DESIGN.md) 명세를 철저하게 준수하여 제작되었습니다.
